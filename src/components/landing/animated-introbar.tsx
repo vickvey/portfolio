@@ -28,7 +28,7 @@ export default function AnimatedIntrobar() {
   }, []);
 
   return (
-    <div className="my-4 bg-[#1e1e2e] hover:scale-105 hover:shadow-lg flex flex-col gap-1.5 h-fit p-3 rounded-lg border-4 border-border shadow-lg shadow-accent">
+    <div className="my-4 bg-[#1e1e2e] hover:scale-105 hover:shadow-lg flex flex-col gap-1.5 h-fit p-3 rounded-lg border-4 border-border shadow-lg shadow-accent w-fit">
       <div className="flex justify-between">
         <div className="flex gap-2">
           <ColoredCircle className="bg-red-500" />
