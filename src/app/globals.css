@@ -72,29 +72,25 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
 
-  --sidebar: black; /* Main sidebar background */
-  --sidebar-foreground: oklch(0.129 0.042 264.695); /* Default text color */
+  --sidebar: black;
+  /* Main sidebar background */
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  /* Default text color */
 
-  --sidebar-primary: oklch(
-    0.208 0.042 265.755
-  ); /* Main highlight (e.g., hover or active bg) */
-  --sidebar-primary-foreground: oklch(
-    0.984 0.003 247.858
-  ); /* Text color on primary */
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  /* Main highlight (e.g., hover or active bg) */
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  /* Text color on primary */
 
-  --sidebar-accent: oklch(
-    0.968 0.007 247.896
-  ); /* Accent elements (e.g., icons, highlights) */
-  --sidebar-accent-foreground: oklch(
-    0.208 0.042 265.755
-  ); /* Text/icon on accent background */
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  /* Accent elements (e.g., icons, highlights) */
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  /* Text/icon on accent background */
 
-  --sidebar-border: oklch(
-    0.929 0.013 255.508
-  ); /* Border color for sidebar items */
-  --sidebar-ring: oklch(
-    0.704 0.04 256.788
-  ); /* Ring color (e.g., focus rings) */
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  /* Border color for sidebar items */
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+  /* Ring color (e.g., focus rings) */
 
   --footer: black;
 }
@@ -139,6 +135,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

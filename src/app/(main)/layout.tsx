@@ -3,6 +3,8 @@
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/hooks/useSidebar";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function MainLayout({
   children,
@@ -13,6 +15,21 @@ export default function MainLayout({
 
   return (
     <div className="min-h-screen flex flex-col font-poppins">
+      <>
+        {/* Background Image */}
+        <div className="inset-0 fixed -z-20">
+          <Image
+            src="/pexels-merlin-11177799.jpg"
+            alt="Background Image"
+            fill
+            className="object-cover object-center"
+            priority // optional for performance
+          />
+        </div>
+        {/* Background Image Blurr */}
+        {/* <div className="absolute h-screen inset-0 -z-10 backdrop-blur-xs"></div> */}
+      </>
+
       <header className="py-4 px-4 md:sticky md:top-0 md:left-0 md:z-50 md:backdrop-blur-2xl">
         <div className="md:hidden">
           <Button onClick={toggle}>{isOpen ? "Close" : "Open"}</Button>
@@ -21,8 +38,12 @@ export default function MainLayout({
           <h3 className="text-2xl font-bold">Alex Biswas</h3>
           <nav>
             <ul className="flex space-x-8 justify-center">
-              <li>Home</li>
-              <li>Projects</li>
+              <li>
+                <Link href={"/"}>Home</Link>
+              </li>
+              <li>
+                <Link href={"/projects"}>Projects</Link>
+              </li>
               <li>Testimonials</li>
               <li>About</li>
             </ul>
@@ -61,10 +82,12 @@ export default function MainLayout({
           <p>Alex Biswas</p>
         </div>
       </aside>
+
       <main className={`${isOpen ? "opacity-40" : "opacity-100"}`}>
         <div className="lg:mx-32 mx-8">{children}</div>
       </main>
-      <footer className="h-96 bg-footer">
+
+      <footer className="h-32 backdrop-blur-xs p-4 text-2xl">
         <div className="flex justify-between">
           <p>Copyright 2025</p>
           <p>Vivek Kumar</p>
