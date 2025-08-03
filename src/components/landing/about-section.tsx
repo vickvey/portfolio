@@ -36,13 +36,11 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="bg-slate-200 dark:bg-slate-950 px-6 md:px-20 py-16"
+      className="bg-[var(--about-bg)] text-[var(--about-text)] px-6 md:px-20 py-16"
     >
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Heading */}
-        <h2 className="text-4xl font-serif font-bold text-center text-zinc-800 dark:text-zinc-100">
-          About Me
-        </h2>
+        <h2 className="text-4xl font-serif font-bold text-center">About Me</h2>
 
         {/* Grid layout: Image + Terminals */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -63,14 +61,14 @@ export default function AboutSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 * i, duration: 0.6 }}
-                className="relative bg-zinc-900/80 dark:bg-zinc-800/70 backdrop-blur-md rounded-xl p-4 font-mono text-sm text-green-400 dark:text-emerald-300 shadow-md border border-zinc-700 min-h-[180px] max-h-[180px] overflow-hidden"
+                className="relative bg-[var(--terminal-bg)] border border-[var(--terminal-border)] backdrop-blur-md rounded-xl p-4 font-mono text-sm text-[var(--terminal-text)] shadow-md min-h-[180px] max-h-[180px] overflow-hidden hover:scale-102 transition-all duration-400 hover:shadow-md hover:shadow-slate-600"
               >
-                {/* Terminal Header Bar */}
+                {/* Terminal Header */}
                 <div className="flex justify-between items-center mb-2">
                   <div className="flex gap-2 text-xs">
-                    <span className="w-3 h-3 rounded-full bg-red-500" />
-                    <span className="w-3 h-3 rounded-full bg-yellow-400" />
-                    <span className="w-3 h-3 rounded-full bg-green-500" />
+                    <span className="w-3 h-3 rounded-full bg-[var(--terminal-dot-red)]" />
+                    <span className="w-3 h-3 rounded-full bg-[var(--terminal-dot-yellow)]" />
+                    <span className="w-3 h-3 rounded-full bg-[var(--terminal-dot-green)]" />
                   </div>
                   <span className="text-xs text-zinc-400 pr-2">
                     {card.title}

@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero-section"
-      className="bg-zinc-100 dark:bg-slate-900 text-primary-foreground"
+      className="dark:bg-[var(--purple-bg)] text-[var(--purple-text)] border-b"
     >
       <MovingHeadline />
 
@@ -21,7 +21,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <motion.p
-            className="text-muted-foreground text-xl max-w-md"
+            className="text-[var(--purple-text)] text-xl max-w-md opacity-80"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -38,11 +38,7 @@ export default function HeroSection() {
             animate="visible"
             variants={{
               hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.15,
-                },
-              },
+              visible: { transition: { staggerChildren: 0.15 } },
             }}
           >
             <motion.div
@@ -50,7 +46,10 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Button asChild>
+              <Button
+                className="bg-[var(--purple-accent)] text-white hover:bg-purple-700"
+                asChild
+              >
                 <a href="#contact">Hire Me</a>
               </Button>
             </motion.div>
@@ -60,7 +59,11 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Button variant="secondary" className="border" asChild>
+              <Button
+                variant="secondary"
+                className="border border-[var(--purple-light)] bg-[var(--purple-light)] text-[var(--purple-text)]"
+                asChild
+              >
                 <a href="/resume.pdf" download>
                   Download Resume
                 </a>
@@ -75,11 +78,7 @@ export default function HeroSection() {
             animate="visible"
             variants={{
               hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.1,
-                },
-              },
+              visible: { transition: { staggerChildren: 0.1 } },
             }}
           >
             {[
@@ -89,7 +88,7 @@ export default function HeroSection() {
             ].map((text, i) => (
               <motion.span
                 key={i}
-                className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full"
+                className="bg-[var(--purple-badge)] text-[var(--purple-text)] px-3 py-1 rounded-full"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
@@ -110,7 +109,7 @@ export default function HeroSection() {
           <img
             src="/illustrations/hiring.svg"
             alt="Illustration of developer working"
-            className="w-full max-w-[260px] md:max-w-[340px] lg:max-w-[380px]"
+            className="hover:scale-108 transition-all duration-1000 dark:opacity-75 w-full max-w-[260px] md:max-w-[340px] lg:max-w-[380px]"
           />
         </motion.div>
       </div>

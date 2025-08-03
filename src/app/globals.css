@@ -47,6 +47,21 @@
 }
 
 :root {
+  --projects-bg: #e0f2fe; /* light blue-100 */
+  --projects-text: #0c4a6e; /* blue-900 */
+  --about-bg: #ecfdf5; /* light green */
+  --about-text: #064e3b; /* deep green */
+  --terminal-bg: #0f172a; /* slate-900 */
+  --terminal-border: #334155; /* slate-700 */
+  --terminal-text: #059669; /* emerald-500 */
+  --terminal-dot-red: #f87171;
+  --terminal-dot-yellow: #facc15;
+  --terminal-dot-green: #4ade80;
+  --purple-bg: #f5f3ff;
+  --purple-text: #4c1d95;
+  --purple-accent: #7e22ce;
+  --purple-light: #ede9fe;
+  --purple-badge: #e9d5ff;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
@@ -96,6 +111,18 @@
 }
 
 .dark {
+  --projects-bg: #0c4a6e; /* blue-900 */
+  --projects-text: #bae6fd; /* blue-200 */
+  --about-bg: #0f172a; /* dark slate */
+  --about-text: #bbf7d0; /* light green */
+  --terminal-bg: #1e293b; /* slate-800 */
+  --terminal-border: #475569;
+  --terminal-text: #34d399; /* emerald-400 */
+  --purple-bg: #1e1b2e;
+  --purple-text: #e9d5ff;
+  --purple-accent: #c084fc;
+  --purple-light: #312e81;
+  --purple-badge: #4c1d95;
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);

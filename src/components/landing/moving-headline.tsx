@@ -32,7 +32,7 @@ export default function MovingHeadline() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="text-3xl sm:text-4xl md:text-6xl font-bold text-center"
+            className="text-[var(--purple-text)]/80 text-3xl sm:text-4xl md:text-6xl font-bold text-center"
           >
             {headlines[index]}
           </motion.h1>
