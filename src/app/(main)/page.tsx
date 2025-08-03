@@ -35,7 +35,7 @@ export default function LandingPage() {
       <AboutSection />
       <ProjectsSection />
       <TechStackSection />
-      <section className="bg-white py-20">
+      {/* <section className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             Skills & Tools
@@ -59,7 +59,7 @@ export default function LandingPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

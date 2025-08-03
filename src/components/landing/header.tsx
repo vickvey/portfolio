@@ -15,7 +15,7 @@ const navItems = [
 
 function Kite() {
   return (
-    <div className="h-4 w-4 rotate-45 flex justify-center items-center bg-gradient-to-tr from-primary to-secondary shadow-md">
+    <div className="h-4 w-4 rotate-45 flex justify-center items-center shadow-md">
       <div className="h-1.5 w-1.5 border bg-secondary"></div>
     </div>
   );
@@ -29,7 +29,7 @@ export default function Header({
   toggle: () => void;
 }) {
   return (
-    <header className="sticky top-0 z-50 w-full px-4 py-3 md:px-8 bg-gradient-to-b from-[#f0f4ff] to-[#ffffff] dark:from-[#0f172a] dark:to-[#1e293b] backdrop-blur-lg border-b">
+    <header className="sticky bg-transparent top-0 z-50 w-full px-4 py-3 md:px-8 backdrop-blur-lg border-b">
       {/* Mobile View */}
       <div className="flex items-center justify-between lg:hidden">
         <Logo />
