@@ -1,29 +1,15 @@
-import { Button } from "@/components/ui/button";
+import Navbar from "./navbar";
+import CTA from "./CTA";
+import MainLogo from "./main-logo";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 py-4 w-full px-8 z-20">
-      <div className="flex justify-between items-center">
-        <div>
-          <h2 className="font-bold text-muted-foreground text-2xl tracking-tighter capitalize font-mono">
-            Vivek Kumar
-          </h2>
-        </div>
-
-        <nav>
-          <ul className="py-2 flex gap-12 bg-background border-2 rounded-lg px-8">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>Testimonials</li>
-          </ul>
-        </nav>
-
-        {/* CTA */}
-        <div>
-          <Button>Hire me</Button>
-        </div>
+    <header className="py-2 fixed top-0 left-0 right-0 lg:mt-4 w-full z-50 backdrop-blur-xs lg:backdrop-blur-none border-b-2 lg:border-none">
+      <div className="grid grid-cols-2 lg:grid-cols-4 items-center">
+        <MainLogo />
+        {/* Desktop only Navbar */}
+        <Navbar />
+        <CTA />
       </div>
     </header>
   );

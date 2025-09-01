@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Revalia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Delius&display=swap");
 @import "tailwindcss";
@@ -7,6 +13,12 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-monoton: "Monoton", serif;
+  --font-rubik80sfade: "Rubik 80s Fade", serif;
+  --font-revalia: "Revalia", serif;
+  --font-orbitron: "Orbitron", serif;
+  --font-electrolize: "Electrolize", serif;
+  --font-majormonodisplay: "Major Mono Display", serif;
   --font-merriweather: "Merriweather", serif;
   --font-delius: "Delius", serif;
   --color-background: var(--background);

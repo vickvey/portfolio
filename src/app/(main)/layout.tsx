@@ -9,14 +9,14 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative h-screen w-full overflow-x-hidden z-0">
+    <div className="relative min-h-screen w-full overflow-x-hidden z-0 font-electrolize">
       {/* Background Animated Layer */}
-      <div className="absolute h-screen w-full -z-10">
+      <div className="fixed inset-0 -z-10">
         <Beams
           beamWidth={2.4}
           beamHeight={15}
           beamNumber={12}
-          lightColor="violet"
+          lightColor="white"
           speed={7}
           noiseIntensity={3}
           scale={0.2}
@@ -25,11 +25,11 @@ export default function MainLayout({
       </div>
 
       {/* Content Layer */}
-      <div className="relative flex-1 z-10 max-w-screen-xl mx-auto">
-        <LayoutGridsColumn />
+      <div className="relative z-10 max-w-screen mx-4 lg:mx-16 2xl:mx-40">
+        {/* <LayoutGridsColumn /> */}
 
-        {/* Actual Content Layer */}
-        <div className="relative flex-1 w-full flex flex-col">
+        {/* Actual Content */}
+        <div className="relative flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
