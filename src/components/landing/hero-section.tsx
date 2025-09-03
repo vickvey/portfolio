@@ -1,15 +1,30 @@
 import Image from "next/image";
 import { RollingText } from "../animate-ui/text/rolling";
 import { RotatingText } from "../animate-ui/text/rotating";
+import { Button } from "../ui/button";
+
+function CTAButton({ content }: { content: string }) {
+  return (
+    <Button
+      variant={"outline"}
+      className="py-5 hover:scale-110 hover:backdrop-blur-3xl hover:backdrop-brightness-150 hover:shadow-white hover:shadow-xs transition-all duration-300"
+    >
+      <span className="font-bold tracking-wider">{content}</span>
+    </Button>
+  );
+}
 
 export default function HeroSection() {
   return (
-    <section className="border-t-2 border-b-2 py-32 h-[40rem]">
+    <section
+      id="hero-section"
+      className="border-t-2 border-b-2 py-32 h-fit backdrop-blur-[1px]"
+    >
       <div className="flex flex-col gap-6">
         <h3 className="text-center text-2xl font-semibold tracking-wide text-white/50">
           Hello, I'm
         </h3>
-        <h1 className="inline-block text-9xl font-monoton tracking-wide font-bold text-center">
+        <h1 className="inline-block text-9xl font-monoton opacity-80 tracking-wide font-bold text-center">
           <RollingText text="VIVEK KUMAR" />
         </h1>
 
@@ -25,15 +40,10 @@ export default function HeroSection() {
           />
         </h2>
 
-        <div className="h-full mt-24 text-2xl font-bold text-white/50 flex justify-center items-center">
-          <Image
-            height={25}
-            width={25}
-            src={"/mouse-scroll-wheel-svgrepo-com.svg"}
-            alt="Mouse Scroll Wheel Image"
-            className="invert-100 opacity-50 hover:cursor-pointer"
-          />
-          <span>Scroll</span>
+        {/* CTA */}
+        <div className="w-fit mx-auto space-x-8">
+          <CTAButton content="View Resume" />
+          <CTAButton content="Contact Me" />
         </div>
       </div>
     </section>

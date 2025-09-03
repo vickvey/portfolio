@@ -26,7 +26,7 @@ export default function MainLayout({
 
       {/* Content Layer */}
       <div className="relative z-10 max-w-screen mx-4 lg:mx-16 2xl:mx-40">
-        {/* <LayoutGridsColumn /> */}
+        <LayoutGridsColumn />
 
         {/* Actual Content */}
         <div className="relative flex flex-col min-h-screen">
