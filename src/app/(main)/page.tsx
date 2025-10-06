@@ -1,5 +1,7 @@
 import AboutSection from "@/components/landing/about-section";
 import HeroSection from "@/components/landing/hero-section";
+import ProjectsSection from "@/components/landing/projects-section";
+import SkillsSection from "@/components/landing/skills-section";
 import Image from "next/image";
 
 function VerticalSeparator() {
@@ -28,24 +30,24 @@ export default function HomePage() {
         <VerticalSeparator />
         <AboutSection />
         <VerticalSeparator />
-        <AboutSection />
+        <SkillsSection />
         <VerticalSeparator />
-        <AboutSection />
+        <ProjectsSection />
         <VerticalSeparator />
       </div>
     </div>
   );
 }
 
-function Filler() {
-  return (
-    <div className="max-w-lg mx-auto my-24">
-      <p className="text-2xl font-light">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-        debitis blanditiis possimus quaerat voluptatum veritatis neque at odio
-        quo quam quibusdam ad similique eum sint eos explicabo nihil repudiandae
-        voluptates?
-      </p>
-    </div>
-  );
-}
+// function Filler() {
+//   return (
+//     <div className="max-w-lg mx-auto my-24">
+//       <p className="text-2xl font-light">
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
+//         debitis blanditiis possimus quaerat voluptatum veritatis neque at odio
+//         quo quam quibusdam ad similique eum sint eos explicabo nihil repudiandae
+//         voluptates?
+//       </p>
+//     </div>
+//   );
+// }

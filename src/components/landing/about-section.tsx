@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
+import { Card, CardContent } from "../ui/card";
 
 function InfoCard({ className }: { className?: string }) {
   return (
@@ -14,21 +14,22 @@ function InfoCard({ className }: { className?: string }) {
         </div>
       </CardHeader> */}
       <CardContent className="text-white/70 text-2xl flex flex-col gap-6">
-        <p>
-          Hey! I'm <span className="text-white font-semibold">Vivek Kumar</span>{" "}
-          — a full-stack web developer and AI/ML enthusiast with a deep interest
-          in Natural Language Processing.
+        <p className="backdrop-blur-lg">
+          Hey! I&apos;m{" "}
+          <span className="text-white font-semibold">Vivek Kumar</span> — a
+          full-stack web developer and AI/ML enthusiast with a deep interest in
+          Natural Language Processing.
         </p>
-        <p>
-          I'm fascinated by the intersection of human language and technology.
-          Whether it's building seamless web experiences or experimenting with
-          large language models, I&apos;m driven by the challenge of making
-          machines understand us better.
+        <p className="backdrop-blur-lg">
+          I&apos;m fascinated by the intersection of human language and
+          technology. Whether it&apos;s building seamless web experiences or
+          experimenting with large language models, I&apos;m driven by the
+          challenge of making machines understand us better.
         </p>
-        <p>
-          Currently, I'm focused on building AI-first web tools that combine
-          robust engineering with the power of NLP — helping turn complex ideas
-          into intuitive, user-friendly applications.
+        <p className="backdrop-blur-lg">
+          Currently, I&apos;m focused on building AI-first web tools that
+          combine robust engineering with the power of NLP — helping turn
+          complex ideas into intuitive, user-friendly applications.
         </p>
       </CardContent>
     </Card>
@@ -39,7 +40,7 @@ export default function AboutSection() {
   return (
     <section
       id="about-section"
-      className="border-t-2 border-b-2 flex items-center h-fit py-24 backdrop-blur-xs"
+      className="border-t-2 border-b-2 flex items-center h-fit py-24"
     >
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col gap-2">

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { RollingText } from "../animate-ui/text/rolling";
 import { RotatingText } from "../animate-ui/text/rotating";
 import { Button } from "../ui/button";
@@ -7,7 +6,7 @@ function CTAButton({ content }: { content: string }) {
   return (
     <Button
       variant={"outline"}
-      className="py-5 hover:scale-110 hover:backdrop-blur-3xl hover:backdrop-brightness-150 hover:shadow-white hover:shadow-xs transition-all duration-300"
+      className="py-5 border-white/30 text-white transition-all duration-300 hover:scale-110 hover:backdrop-blur-3xl hover:backdrop-brightness-150 hover:shadow-[0_0_10px_rgba(255,255,255,0.5)] hover:border-white"
     >
       <span className="font-bold tracking-wider">{content}</span>
     </Button>
@@ -22,7 +21,7 @@ export default function HeroSection() {
     >
       <div className="flex flex-col gap-6">
         <h3 className="text-center text-2xl font-semibold tracking-wide text-white/50">
-          Hello, I'm
+          Hello, I&apos;m
         </h3>
         <h1 className="inline-block text-9xl font-monoton opacity-80 tracking-wide font-bold text-center">
           <RollingText text="VIVEK KUMAR" />
