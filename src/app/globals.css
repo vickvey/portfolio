@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Semantic font variable names */
+  /* MAIN BODY — your core readable brand font */
+  --font-primary: var(--font-inter);
+
+  /* HEADINGS — stylish serif display font for hero text, section titles */
+  --font-secondary: var(--font-dm-serif-text);
+
+  /* ACCENT — elegant serif font for highlights, quotes, pull text */
+  --font-accent: var(--font-lora);
+
+  /* TERTIARY — backup serif (for long-form reading or printed sections) */
+  --font-tertiary: var(--font-merriweather);
+
+  /* DISPLAY / HERO — loud, attention-grabbing, for banners or ads */
+  --font-display: "BBH Sans Hegarty", sans-serif;
+
+  /* LOGO — decorative signature font for brand wordmark */
+  --font-logo: var(--font-montez);
+
+  /* CODE — monospace font for code blocks or technical content */
+  --font-code: var(--font-roboto-mono);
+
+  /* Colors and etc. */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Base Colors */
+  --background: #fafaf7; /* mint_cream 800 - very light background */
+  --foreground: #0b2545; /* oxford_blue 500 - dark text */
+
+  /* Card / Popover */
+  --card: #d1dde7; /* powder_blue 800 - soft card background */
+  --card-foreground: #0b2545; /* oxford_blue 500 - card text */
+
+  --popover: #d1dde7; /* same as card */
+  --popover-foreground: #0b2545; /* same as card text */
+
+  /* Primary (main brand color) */
+  --primary: #134074; /* yale_blue 500 - deep rich blue */
+  --primary-foreground: #eef4ed; /* mint_cream 500 - light text on primary */
+
+  /* Secondary (supporting tone) */
+  --secondary: #6088ad; /* powder_blue 400 - gentle blue */
+  --secondary-foreground: #0b2545; /* oxford_blue 500 - text for contrast */
+
+  /* Muted / Subtle tones */
+  --muted: #b5cfb1; /* mint_cream 400 - subtle muted bg */
+  --muted-foreground: #13315c; /* berkeley_blue 500 - muted text */
+
+  /* Accent */
+  --accent: #21559f; /* berkeley_blue 600 - blue accent */
+  --accent-foreground: #eef4ed; /* mint_cream 500 - text on accent */
+
+  /* Destructive (for errors or alerts) */
+  --destructive: #d84b16; /* warm red - keep same for alerts */
+  --destructive-foreground: #eef4ed; /* light text */
+
+  /* Borders / Inputs / Rings */
+  --border: #baccdc; /* powder_blue 700 - subtle border */
+  --input: #f1f6f0; /* mint_cream 600 - input background */
+  --ring: #134074; /* yale_blue 500 - focus ring */
+
+  /* Charts */
+  --chart-1: #134074; /* yale_blue 500 */
+  --chart-2: #6088ad; /* powder_blue 400 */
+  --chart-3: #21559f; /* berkeley_blue 600 */
+  --chart-4: #d84b16; /* destructive */
+  --chart-5: #0b2545; /* oxford_blue 500 */
+
+  /* Sidebar */
+  --sidebar: #eef4ed; /* mint_cream 500 - light sidebar bg */
+  --sidebar-foreground: #0b2545; /* oxford_blue 500 - sidebar text */
+  --sidebar-primary: #134074; /* yale_blue 500 - sidebar primary */
+  --sidebar-primary-foreground: #eef4ed; /* mint_cream 500 - text on primary */
+  --sidebar-accent: #6088ad; /* powder_blue 400 - sidebar accent */
+  --sidebar-accent-foreground: #0b2545; /* oxford_blue 500 - accent text */
+  --sidebar-border: #baccdc; /* powder_blue 700 - sidebar border */
+  --sidebar-ring: #134074; /* yale_blue 500 - sidebar ring */
+}
+
+.dark {
+  /* Base Colors */
+  --background: #040d17; /* yale_blue 100 - very dark navy */
+  --foreground: #e8eef3; /* powder_blue 900 - light text */
+
+  /* Card / Popover */
+  --card: #07192e; /* yale_blue 200 - dark card background */
+  --card-foreground: #e8eef3; /* powder_blue 900 - card text */
+
+  --popover: #07192e; /* same as card */
+  --popover-foreground: #e8eef3; /* same as card text */
+
+  /* Primary (main brand color) */
+  --primary: #3c88df; /* yale_blue 700 - bright blue */
+  --primary-foreground: #040d17; /* yale_blue 100 - dark text on primary */
+
+  /* Secondary (supporting tone) */
+  --secondary: #0f284b; /* berkeley_blue 400 - deep blue */
+  --secondary-foreground: #e8eef3; /* powder_blue 900 - light text */
+
+  /* Muted / Subtle tones */
+  --muted: #233a5e; /* custom dark blue - subtle muted bg */
+  --muted-foreground: #7ba7e4; /* berkeley_blue 800 - muted text */
+
+  /* Accent */
+  --accent: #397bd6; /* berkeley_blue 700 - blue accent */
+  --accent-foreground: #eef4ed; /* mint_cream 500 - text on accent */
+
+  /* Destructive (for errors or alerts) */
+  --destructive: #d84b16; /* warm red - keep same for alerts */
+  --destructive-foreground: #040d17; /* dark text on red */
+
+  /* Borders / Inputs / Rings */
+  --border: #174e90; /* oxford_blue 600 - border */
+  --input: #0b2545; /* oxford_blue 500 - input background */
+  --ring: #3c88df; /* yale_blue 700 - focus ring */
+
+  /* Charts */
+  --chart-1: #3c88df; /* yale_blue 700 */
+  --chart-2: #0f284b; /* berkeley_blue 400 */
+  --chart-3: #397bd6; /* berkeley_blue 700 */
+  --chart-4: #d84b16; /* destructive */
+  --chart-5: #e8eef3; /* powder_blue 900 */
+
+  /* Sidebar */
+  --sidebar: #07192e; /* yale_blue 200 - dark sidebar bg */
+  --sidebar-foreground: #e8eef3; /* powder_blue 900 - sidebar text */
+  --sidebar-primary: #3c88df; /* yale_blue 700 - sidebar primary */
+  --sidebar-primary-foreground: #040d17; /* yale_blue 100 - text on primary */
+  --sidebar-accent: #0f284b; /* berkeley_blue 400 - sidebar accent */
+  --sidebar-accent-foreground: #e8eef3; /* powder_blue 900 - accent text */
+  --sidebar-border: #174e90; /* oxford_blue 600 - sidebar border */
+  --sidebar-ring: #3c88df; /* yale_blue 700 - sidebar ring */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-primary leading-relaxed;
+    font-feature-settings: "liga" 1, "calt" 1; /* For better typography */
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl font-semibold tracking-wide;
+  }
+  h3 {
+    @apply text-3xl md:text-4xl font-semibold tracking-wide;
+  }
+  h4 {
+    @apply text-2xl md:text-3xl font-medium tracking-wide;
+  }
+  h5 {
+    @apply text-xl md:text-2xl font-medium tracking-wide;
+  }
+  h6 {
+    @apply text-lg md:text-xl font-medium tracking-wide;
+  }
+
+  p {
+    @apply font-primary text-2xl;
+  }
+
+  article {
+    @apply w-full max-w-3xl mx-auto px-4 md:px-0;
+  }
+}
+
+@layer components {
+  .section-body {
+    @apply w-full flex flex-col;
+    @apply space-y-6; /* Consistent spacing between paragraphs */
+  }
+
+  .section-heading {
+    @apply font-secondary tracking-wider text-7xl text-start;
+  }
+
+  .section-body {
+    @apply py-2;
+  }
+}
