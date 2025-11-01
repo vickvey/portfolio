@@ -1,6 +1,6 @@
 import Image from "next/image";
-import RotatingText from "../rotating-text";
-import { Button } from "../ui/button";
+import RotatingText from "@/components/common/rotating-text";
+import { Button } from "@/components/ui/button";
 import StatsSection from "./stats-section";
 
 const roles = [
@@ -16,9 +16,9 @@ export default function HeroSection() {
     <section
       id="hero-section"
       aria-label="Introduction and professional roles"
-      className="py-24 max-w-5xl mx-auto px-4 md:px-0 transition-colors duration-300"
+      className="py-16 md:py-24 w-full px-4 lg:px-8 transition-colors duration-300"
     >
-      <div className="flex flex-col md:flex-row justify-between items-center gap-12">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 lg:max-w-5xl lg:mx-auto">
         <LeftContent />
         <RightContent />
       </div>

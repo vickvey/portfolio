@@ -9,14 +9,15 @@ const navItems = [
   { name: "Projects", href: "#projects-section" },
   { name: "Experience", href: "#experience-section" },
   { name: "Contact", href: "#contact-section" },
+  { name: "Blogs", href: "/blogs" },
 ];
 
 export default function Navbar() {
   const router = useRouter();
 
   const handleNavClick = (href: string) => {
-    if (href === "/") {
-      router.push("/");
+    if (href === "/" || href === "/blogs") {
+      router.push(href);
       return;
     }
 
@@ -31,13 +32,14 @@ export default function Navbar() {
 
   return (
     <nav aria-label="Primary navigation" className="hidden lg:block">
-      <ul className="font-accent flex items-center space-x-2">
+      <ul className="font-accent flex items-center">
         {navItems.map(({ name, href }) => (
           <li key={href}>
             {/* prevent default link jump, use smooth scroll */}
             <button
+              type="button"
               onClick={() => handleNavClick(href)}
-              className="px-4 py-2.5 text-xl font-primary rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition duration-300 hover:bg-accent hover:text-accent-foreground"
+              className="px-4 py-2.5 text-md font-primary rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 transition duration-300 hover:bg-accent hover:text-accent-foreground"
             >
               {name}
             </button>

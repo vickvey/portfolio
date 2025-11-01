@@ -9,7 +9,7 @@ import {
   poppins,
   robotoMono,
 } from "./fonts";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/common/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {

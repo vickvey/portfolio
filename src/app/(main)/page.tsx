@@ -1,9 +1,9 @@
-import AboutSection from "@/components/sections/about-section";
-import ContactSection from "@/components/sections/contact-section";
-import ExperienceSection from "@/components/sections/experience-section";
-import HeroSection from "@/components/sections/hero-section";
-import ProjectsSection from "@/components/sections/projects-section";
-import ServicesSection from "@/components/sections/services-section";
+import AboutSection from "@/components/main/sections/about-section";
+import ContactSection from "@/components/main/sections/contact-section";
+import ExperienceSection from "@/components/main/sections/experience-section";
+import HeroSection from "@/components/main/sections/hero-section";
+import ProjectsSection from "@/components/main/sections/projects-section";
+import ServicesSection from "@/components/main/sections/services-section";
 
 export default function HomePage() {
   return (
@@ -12,8 +12,8 @@ export default function HomePage() {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
-      <ContactSection />
       <ExperienceSection />
+      <ContactSection />
     </>
   );
 }

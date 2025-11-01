@@ -149,8 +149,7 @@ function ProjectCard({
         {/* Duration + Likes */}
         <div className="flex items-center justify-between text-sm text-muted-foreground pt-2">
           <span>⏱️ {duration}</span>
-
-          <button
+          <Button
             onClick={toggleLike}
             className="flex items-center space-x-1 hover:text-accent transition-colors"
             aria-label="Like project"
@@ -162,7 +161,7 @@ function ProjectCard({
               }`}
             />
             <span>{likeCount}</span>
-          </button>
+          </Button>
         </div>
 
         {/* Live Demo Button */}

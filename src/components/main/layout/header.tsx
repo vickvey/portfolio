@@ -1,9 +1,9 @@
-import { ToggleThemeButton } from "@/components/toggle-theme-button";
+import { ToggleThemeButton } from "@/components/common/toggle-theme-button";
 import { Button } from "@/components/ui/button";
 import Navbar from "./navbar";
 import Link from "next/link";
 
-export default function Header() {
+const Header = () => {
   return (
     <header className="z-50 sticky top-0 bg-background">
       <div className="w-full px-4 lg:px-16 flex justify-between items-center py-4">
@@ -13,7 +13,7 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
 
 const Logo = () => (
   <div className="logo">
@@ -29,3 +29,5 @@ const CTA = () => (
     <Button>Hire Me</Button>
   </div>
 );
+
+export default Header;
