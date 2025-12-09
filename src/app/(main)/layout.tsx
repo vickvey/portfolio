@@ -1,3 +1,6 @@
+// ./src/app/(main)/layout.tsx
+
+import * as React from "react";
 import Footer from "@/components/main/layout/footer";
 import Header from "@/components/main/layout/header";
 

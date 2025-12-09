@@ -1,3 +1,5 @@
+// ./src/app/(main)/page.tsx
+
 import AboutSection from "@/components/main/sections/about-section";
 import ContactSection from "@/components/main/sections/contact-section";
 import ExperienceSection from "@/components/main/sections/experience-section";
