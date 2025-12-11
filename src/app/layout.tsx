@@ -1,3 +1,5 @@
+// ./src/layout.tsx
+
 import type { Metadata } from "next";
 import {
   dmSerif,

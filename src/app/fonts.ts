@@ -1,3 +1,5 @@
+// ./src/app/fonts.ts
+
 import {
   Poppins,
   Lora,
@@ -14,7 +16,6 @@ export const poppins = Poppins({
   variable: "--font-poppins",
   weight: "400",
 });
-
 export const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
 export const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const dmSerif = DM_Serif_Text({
