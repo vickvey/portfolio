@@ -68,6 +68,7 @@ export default function ContactSection() {
           required
         />
 
+        {/*
         <Button
           type="submit"
           disabled={loading}
@@ -75,6 +76,9 @@ export default function ContactSection() {
         >
           {loading ? "Sending..." : "Send Message"}
         </Button>
+        */}
+
+          <Button disabled>Send Message (Coming soon)</Button>
 
         {status === "success" && (
           <p className="text-green-600 mt-2 text-center">
