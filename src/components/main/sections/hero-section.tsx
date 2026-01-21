@@ -5,13 +5,17 @@ import StatsSection from "./stats-section";
 
 const roles = [
   "Full Stack Web Developer.",
-  "UI/UX Designer.",
   "Frontend Developer.",
   "Backend Developer.",
-  "NLP Researcher.",
+  "Data Analyst.",
+  "Automation Expert.",
 ];
 
-export default function HeroSection() {
+export default function HeroSection({
+  onResumeClick,
+}: {
+  onResumeClick: () => void;
+}) {
   return (
     <section
       id="hero-section"
@@ -19,7 +23,7 @@ export default function HeroSection() {
       className="py-16 md:py-24 w-full px-4 lg:px-8 transition-colors duration-300"
     >
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 lg:max-w-5xl lg:mx-auto">
-        <LeftContent />
+        <LeftContent onResumeClick={onResumeClick} />
         <RightContent />
       </div>
       <StatsSection />
@@ -27,13 +31,13 @@ export default function HeroSection() {
   );
 }
 
-function LeftContent() {
+function LeftContent({ onResumeClick }: { onResumeClick: () => void }) {
   return (
     <div className="flex flex-col max-w-lg">
       <HeroName />
       <Tagline />
       <Description />
-      <CallToActions />
+      <CallToActions onResumeClick={onResumeClick} />
     </div>
   );
 }
@@ -83,22 +87,16 @@ function Description() {
   );
 }
 
-function CallToActions() {
+function CallToActions({ onResumeClick }: { onResumeClick: () => void }) {
   return (
     <div className="flex gap-4 flex-wrap">
-      <Button
-        variant="outline"
-        aria-label="View My Work"
-        className="transition-transform duration-300 hover:scale-105"
-      >
-        View My Work
+      <Button variant="outline">View My Work</Button>
+
+      <Button className="bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground">
+        Let&apos;s Talk
       </Button>
-      <Button
-        aria-label="Hire Me"
-        className="bg-primary text-primary-foreground hover:bg-accent hover:text-accent-foreground transition-transform duration-300 hover:scale-105"
-      >
-        Let's Talk
-      </Button>
+
+      <Button onClick={onResumeClick}>View Resume</Button>
     </div>
   );
 }
